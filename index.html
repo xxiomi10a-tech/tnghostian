@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INJECKTOR GACOR - Payment Terminal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset dan Font Tema Hacking */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Latar Belakang Hitam */
+            color: #00ff41; /* Teks Hijau Neon */
+            font-family: 'Source Code Pro', monospace; /* Font Terminal */
+            line-height: 1.6;
+            overflow-x: hidden; /* Mencegah scroll horizontal */
+        }
+
+        /* Penyesuaian untuk Mobile */
+        .container {
+            padding: 20px 10px; /* Padding lebih kecil untuk mobile */
+            max-width: 450px; /* Batasan lebar untuk fokus tampilan mobile */
+            margin: 0 auto;
+            border: 2px solid #00ff41; /* Border luar efek terminal */
+            box-shadow: 0 0 10px #00ff41; /* Efek cahaya neon */
+            min-height: 100vh; /* Memastikan tinggi minimum penuh layar */
+        }
+
+        /* Header/Judul */
+        .hacker-terminal {
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #009933;
+            margin-bottom: 20px;
+        }
+
+        .hacker-terminal h1 {
+            font-size: 1.8em; /* Ukuran font lebih cocok untuk mobile */
+            text-shadow: 0 0 5px #00ff41;
+            margin: 10px 0 5px 0;
+        }
+
+        .ghostian-title {
+            font-size: 0.9em;
+            color: #ff00ff; /* Warna ungu neon untuk kontras */
+            margin: 0;
+        }
+
+        /* Bagian/Seksi */
+        .section-title {
+            color: #00ffff; /* Warna Cyan neon */
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            border-left: 5px solid #00ffff;
+            padding-left: 10px;
+        }
+
+        /* Info Pembayaran */
+        .payment-info {
+            margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border: 1px solid #009933;
+        }
+
+        .payment-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            word-break: break-all; /* Memastikan nomor tidak melebihi batas */
+        }
+
+        .wallet-name {
+            color: #ffcc00; /* Kuning neon */
+            font-weight: bold;
+            margin-right: 10px;
+            min-width: 50px; /* Lebar minimum untuk nama wallet */
+        }
+
+        .account-number {
+            flex-grow: 1;
+        }
+
+        .instruction {
+            color: #ff004c; /* Merah neon */
+            font-size: 0.9em;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        /* Tombol Copy */
+        .copy-btn {
+            background-color: #006622;
+            color: #00ff41;
+            border: 1px solid #00ff41;
+            padding: 3px 8px;
+            cursor: pointer;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 0.8em;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .copy-btn:hover {
+            background-color: #00ff41;
+            color: #000000;
+        }
+
+        /* Pemisah Horizontal */
+        .hacker-hr {
+            border: none;
+            border-top: 1px dotted #009933;
+            margin: 30px 0;
+        }
+
+        /* Upload Bukti */
+        .upload-box {
+            text-align: center;
+        }
+
+        .hacker-input {
+            display: none; /* Sembunyikan input file bawaan */
+        }
+
+        .hacker-button {
+            display: inline-block;
+            background-color: #004488; /* Biru neon */
+            color: #00ffff;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 2px solid #00ffff;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .hacker-button:hover {
+            background-color: #00ffff;
+            color: #000000;
+            box-shadow: 0 0 10px #00ffff;
+        }
+
+        /* Link Situs */
+        .link-section {
+            text-align: center;
+        }
+
+        .hacker-link {
+            display: block;
+            background-color: #660066; /* Ungu gelap */
+            color: #ff00ff;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border: 2px solid #ff00ff;
+            margin-top: 15px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .hacker-link:hover {
+            background-color: #ff00ff;
+            color: #000000;
+            box-shadow: 0 0 10px #ff00ff;
+        }
+
+        .hacker-symbol {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .hacker-footer {
+            text-align: right;
+            margin-top: 30px;
+            padding-top: 10px;
+            border-top: 1px dashed #009933;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="hacker-terminal">
+            <h1>:: INJECKTOR GACOR ::</h1>
+            <p class="ghostian-title">[[ Powered by **TN. GHOSTIAN** ]]</p>
+        </header>
+
+        <section class="payment-section">
+            <h2 class="section-title">$ PAYMENT_GATEWAY_ACCESS_GRANTED</h2>
+            
+            <div class="payment-info">
+                <div class="payment-item">
+                    <span class="wallet-name">DANA</span>: 
+                    <span class="account-number">087729167770</span>
+                    <button class="copy-btn" onclick="copyToClipboard('087729167770')">COPY</button>
+                </div>
+                <div class="payment-item">
+                    <span class="wallet-name">OVO</span>: 
+                    <span class="account-number">087729167770</span>
+                    <button class="copy-btn" onclick="copyToClipboard('087729167770')">COPY</button>
+                </div>
+                <div class="payment-item">
+                    <span class="wallet-name">GOPAY</span>: 
+                    <span class="account-number">087729167770</span>
+                    <button class="copy-btn" onclick="copyToClipboard('087729167770')">COPY</button>
+                </div>
+            </div>
+            
+            <p class="instruction">> **TRANSFER TO ONE OF THE ABOVE ACCOUNTS**</p>
+        </section>
+
+        <hr class="hacker-hr">
+
+        <section class="upload-section">
+            <h2 class="section-title">$ IMPOR_TRANSFER_PROOF</h2>
+            <div class="upload-box">
+                <input type="file" id="proofUpload" accept="image/*" class="hacker-input">
+                <label for="proofUpload" class="hacker-button">[[ **ATTACH_FILE** ]]</label>
+            </div>
+        </section>
+
+        <hr class="hacker-hr">
+
+        <section class="link-section">
+            <h2 class="section-title">$ ACCESS_SITE_LINK</h2>
+            <a href="https://868992.xyz" target="_blank" class="hacker-link">
+                <span class="hacker-symbol">>>></span> **LINK SITUS** <span class="hacker-symbol"><<<</span>
+            </a>
+        </section>
+
+        <footer class="hacker-footer">
+            <p>_ _ _ [ SYSTEM ONLINE ]</p>
+        </footer>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            // Menggunakan API Clipboard modern
+            navigator.clipboard.writeText(text).then(function() {
+                alert("Account Number Copied: " + text);
+            }, function(err) {
+                // Fallback untuk browser lama
+                var textArea = document.createElement("textarea");
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    alert("Account Number Copied: " + text);
+                } catch (err) {
+                    console.error('Could not copy text: ', err);
+                }
+                document.body.removeChild(textArea);
+            });
+        }
+    </script>
+</body>
+</html>
